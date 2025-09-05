@@ -1,0 +1,17 @@
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana; background: #f0f2f5; margin:0; padding:0; }
+.container { max-width: 1000px; margin: auto; padding: 20px; }
+h1 { text-align: center; color: #333; }
+#loginSection { text-align: center; margin-top: 50px; }
+#loginSection input { padding: 8px; margin: 5px; width: 200px; border-radius: 5px; border: 1px solid #ccc; }
+#loginSection button { padding: 8px 15px; margin-top: 10px; border: none; background: #4CAF50; color: white; border-radius: 5px; cursor: pointer; }
+#mainSection { display:none; }
+#userInfo { font-size: 18px; margin-bottom: 15px; text-align: center; }
+#searchInput { width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ccc; }
+table { width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden; }
+th, td { padding: 12px; text-align: center; border-bottom: 1px solid #ddd; }
+th { background: #4CAF50; color: white; }
+tr:hover { background-color: #f1f1f1; }
+button { padding: 5px 10px; margin: 2px; cursor: pointer; border: none; border-radius: 4px; }
+.available { background-color: #4CAF50; color: white; }
+.unavailable { background-color: #f44336; color: white; }
+.warning { background-color: #FF9800; color: white; }

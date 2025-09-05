@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Controle de Equipamentos</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <div id="loginSection">
+    <h1>Login</h1>
+    <input type="text" id="username" placeholder="Digite seu nome"><br>
+    <input type="password" id="adminPassword" placeholder="Senha do admin (se for admin)"><br>
+    <button onclick="login()">Entrar</button>
+  </div>
+
+  <div id="mainSection">
+    <h1>Controle de Equipamentos</h1>
+    <p id="userInfo"></p>
+    <input type="text" id="searchInput" placeholder="Buscar equipamento..." onkeyup="renderTable()">
+    <table>
+      <thead>
+        <tr>
+          <th>Equipamento</th>
+          <th>Total</th>
+          <th>Disponível</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="equipmentTable"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
