@@ -1,42 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Controle de Equipamentos</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle de Equipamentos</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<div class="container">
-
-  <div id="loginSection">
-    <h1>Login</h1>
-    <input type="text" id="username" placeholder="Digite seu nome"><br>
-    <input type="password" id="adminPassword" placeholder="Senha do admin (se for admin)"><br>
-    <button onclick="login()">Entrar</button>
-  </div>
-
-  <div id="mainSection">
+  <header>
     <h1>Controle de Equipamentos</h1>
-    <p id="userInfo"></p>
-    <input type="text" id="searchInput" placeholder="Buscar equipamento..." onkeyup="renderTable()">
-    <table>
-      <thead>
-        <tr>
-          <th>Equipamento</th>
-          <th>Total</th>
-          <th>Disponível</th>
-          <th>Status</th>
-          <th>Ações</th>
-        </tr>
-      </thead>
-      <tbody id="equipmentTable"></tbody>
-    </table>
-  </div>
+  </header>
 
-</div>
+  <main id="app">
+    <!-- Tela de Login -->
+    <section id="loginSection">
+      <div class="card">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Digite seu nome">
+        <input type="password" id="adminPassword" placeholder="Senha do admin (se for admin)">
+        <button onclick="login()">Entrar</button>
+      </div>
+    </section>
 
-<script src="script.js"></script>
+    <!-- Tela Principal -->
+    <section id="mainSection" style="display: none;">
+      <div class="card user-info">
+        <p id="userInfo"></p>
+        <button onclick="logout()">Sair</button>
+      </div>
+
+      <div class="card">
+        <h2>Equipamentos</h2>
+        <table id="itemsTable">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Disponível</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="itemsBody"></tbody>
+        </table>
+      </div>
+
+      <div class="card" id="historySection">
+        <h2>Histórico</h2>
+        <ul id="historyList"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
